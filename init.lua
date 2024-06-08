@@ -521,6 +521,8 @@ require('lazy').setup({
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
+        'clangd',
+        'lua_ls',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -704,10 +706,10 @@ require('lazy').setup({
     end,
   },
   {
-    'rafi/awesome-vim-colorschemes',
+    'EdenEast/nightfox.nvim',
     priority = 900,
     init = function()
-      vim.cmd.colorscheme 'jellybeans'
+      vim.cmd.colorscheme 'duskfox'
     end,
   },
   {
